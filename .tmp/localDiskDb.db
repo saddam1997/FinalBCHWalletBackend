@@ -1,0 +1,74 @@
+{
+  "data": {
+    "transaction": [],
+    "user": []
+  },
+  "schema": {
+    "transaction": {
+      "fromUserId": {
+        "type": "string"
+      },
+      "transactionAmount": {
+        "type": "float"
+      },
+      "transactionType": {
+        "type": "string"
+      },
+      "priceAcceptByUser": {
+        "type": "string"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      }
+    },
+    "user": {
+      "email": {
+        "type": "string",
+        "unique": true
+      },
+      "BTCbalance": {
+        "type": "float",
+        "defaultsTo": 0
+      },
+      "BCHbalance": {
+        "type": "float",
+        "defaultsTo": 0
+      },
+      "userBCHAddress": {
+        "type": "string"
+      },
+      "userBTCAddress": {
+        "type": "string"
+      },
+      "encryptedPassword": {
+        "type": "string"
+      },
+      "encryptedSpendingpassword": {
+        "type": "string"
+      },
+      "verifyEmail": {
+        "type": "boolean",
+        "defaultsTo": false
+      },
+      "isAdmin": {
+        "type": "boolean",
+        "defaultsTo": false
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      }
+    }
+  },
+  "counters": {
+    "user": {
+      "id": 24
+    },
+    "transaction": {}
+  }
+}
